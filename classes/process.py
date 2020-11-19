@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import time
-from face_detection import FaceDetection
+from classes.face_detection import FaceDetection
 from scipy import signal
 # from sklearn.decomposition import FastICA
 

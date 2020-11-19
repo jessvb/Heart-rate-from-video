@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import sys
 import time
-from process import Process
-from video import Video
+from classes.process import Process
+from classes.video import Video
 
 import pandas as pd
 import os
@@ -52,8 +52,8 @@ while status == True:
     # every so often, show percent done
     percent_done = curr_frame_num/max_frame_num*100
     if (percent_done > iter_percent):
-        print('current frame: ' + str(curr_frame_num))
-        print('percent done: ' + str(percent_done))
+        print('current frame: %.0f' % curr_frame_num)
+        print('percent done: %.1f%%' % percent_done)
         iter_percent += 20
 
 
