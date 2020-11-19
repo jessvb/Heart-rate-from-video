@@ -6,6 +6,7 @@ class Video(object):
     def __init__(self):
         self.dirname = ""
         self.cap = None
+        self.fps = -1
         t0 = 0
         
     def start(self):
@@ -15,9 +16,9 @@ class Video(object):
             return
             
         self.cap = cv2.VideoCapture(self.dirname)
-        fps = self.cap.get(cv2.CAP_PROP_FPS)
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)
         self.frame_count = self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
-        print(fps)
+        print(self.fps)
         self.t0 = time.time()
         print(self.t0)
         self.valid = False
